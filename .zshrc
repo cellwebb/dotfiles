@@ -8,7 +8,7 @@ ZSH_THEME="robbyrussell"
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 1
 
-# History Settings
+# History settings
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
@@ -50,7 +50,7 @@ fi
 # Initialize rbenv (Ruby version manager)
 eval "$(rbenv init - zsh)"
 
-# Plugins
+# Oh-My-Zsh lugins
 plugins=(
     aliases
     alias-finder
@@ -76,4 +76,5 @@ zstyle ':omz:plugins:alias-finder' longer yes
 zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
 
+# Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
