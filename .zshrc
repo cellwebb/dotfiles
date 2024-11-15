@@ -53,9 +53,12 @@ eval "$(rbenv init - zsh)"
 # Plugins
 plugins=(
     aliases
+    alias-finder
     brew
+    deno
     docker
     docker-compose
+    dotenv
     git
     github
     gitignore
@@ -66,5 +69,11 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+# Alias Finder Plugin Configuration
+zstyle ':omz:plugins:alias-finder' autoload yes
+zstyle ':omz:plugins:alias-finder' longer yes
+zstyle ':omz:plugins:alias-finder' exact yes
+zstyle ':omz:plugins:alias-finder' cheaper yes
 
 source $ZSH/oh-my-zsh.sh
