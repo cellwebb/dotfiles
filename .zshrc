@@ -27,7 +27,7 @@ ENABLE_CORRECTION="true"
 # Ensure completions get loaded
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit
-compinit -u
+compinit -C
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
