@@ -18,6 +18,7 @@ alias ...='cd ../..'
 # List directories
 alias ll='ls -la'
 alias la='ls -A'
+alias ldot='ls -ld .*'
 
 # Zsh quick access
 alias zshconfig="open ~/.zshrc"
