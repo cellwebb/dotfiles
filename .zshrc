@@ -46,14 +46,18 @@ fi
 if [ -f "$ZSH/custom/functions.zsh" ]; then
   source "$ZSH/custom/functions.zsh"
 fi
+if [ -f "$ZSH/custom/secrets.zsh" ]; then
+  source "$ZSH/custom/secrets.zsh"
+fi
 
 # Initialize rbenv (Ruby version manager)
 eval "$(rbenv init - zsh)"
 
-# Oh-My-Zsh lugins
+# Oh-My-Zsh Plugins
 plugins=(
     aliases
     alias-finder
+    autoenv
     brew
     deno
     docker
@@ -75,6 +79,9 @@ zstyle ':omz:plugins:alias-finder' autoload yes
 zstyle ':omz:plugins:alias-finder' longer yes
 zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
+
+# Load autoenv
+source ~/.dotfiles/lib/zsh-autoenv/autoenv.zsh
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
