@@ -25,6 +25,8 @@ To use these configurations, clone this repository and create symbolic links fro
 
 **NOTE:** Creating symbolic links will **overwrite** existing files! Create backups!
 
+**NOTE:** Some plugins, such as `autoenv`, will require additional steps to install. Please refer to the plugin's documentation for detailed instructions.
+
 ```bash
 git clone https://github.com/cellwebb/dotfiles.git ~/dotfiles
 
