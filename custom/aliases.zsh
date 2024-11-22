@@ -2,7 +2,7 @@
 
 # Python shortcuts
 alias python=python3
-alias pip=pip3
+# alias pip=pip3
 alias server="python3 -m http.server"
 
 # Git shortcuts

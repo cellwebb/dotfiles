@@ -22,7 +22,7 @@ setopt menu_complete
 setopt list_packed
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Ensure completions get loaded
 fpath=(~/.zsh $fpath)
@@ -57,12 +57,12 @@ eval "$(rbenv init - zsh)"
 plugins=(
     aliases
     alias-finder
-    autoenv
+    # autoenv
     brew
     deno
     docker
     docker-compose
-    dotenv
+    # dotenv
     git
     github
     gitignore
@@ -81,7 +81,10 @@ zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
 
 # Load autoenv
-source ~/.dotfiles/lib/zsh-autoenv/autoenv.zsh
+# source ~/.dotfiles/lib/zsh-autoenv/autoenv.zsh
+
+# Remove duplicate PATH entries
+typeset -U PATH
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
