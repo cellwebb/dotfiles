@@ -76,7 +76,7 @@ plugins=(
 
 # Alias Finder Plugin Configuration
 zstyle ':omz:plugins:alias-finder' autoload yes
-zstyle ':omz:plugins:alias-finder' longer yes
+zstyle ':omz:plugins:alias-finder' longer no
 zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
 
