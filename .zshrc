@@ -93,3 +93,5 @@ fpath=(/Users/cell/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+alias undo-commit='git reset --soft HEAD~1'
