@@ -11,3 +11,6 @@ export LANG=en_US.UTF-8
 
 # Java (OpenJDK 11)
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+
+# Docker
+export COMPOSE_BAKE=true
