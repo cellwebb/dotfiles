@@ -20,6 +20,10 @@ alias ll='ls -la'
 alias la='ls -A'
 alias ldot='ls -ld .*'
 
+# Directory shortcuts
+alias proj='cd /Volumes/projects'
+
 # Zsh quick access
 alias zshconfig="open ~/.zshrc"
 alias ohmyzsh="open ~/.oh-my-zsh"
+
