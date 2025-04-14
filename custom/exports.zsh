@@ -4,6 +4,7 @@ export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"  # Add OpenJDK 11 to PATH
 export PATH="$(brew --prefix)/bin:$PATH"  # Add Homebrew to PATH
 export PATH=".venv/bin:venv/bin:$PATH"  # Add virtualenv to PATH
 export PATH="/Users/cell/.codeium/windsurf/bin:$PATH"  # Add Windsurf to PATH
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"  # Add PostgreSQL to PATH
 
 # Language settings - helps optimize shell startup speed
 export LC_ALL=en_US.UTF-8
