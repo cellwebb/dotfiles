@@ -20,7 +20,7 @@ alias ...='cd ../..'
 # List directories
 alias ll='ls -la'
 alias la='ls -A'
-alias ldot='ls -ld .*'
+alias ldot='ls -d .*'
 
 # Directory shortcuts
 alias proj='cd /Volumes/projects'
