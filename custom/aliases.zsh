@@ -10,6 +10,7 @@ alias gs='git status'
 alias gc='git commit'
 alias gp='git pull'
 alias gcm='git checkout main'
+gtag() { git tag "$@" && git push origin "$@"; }
 alias undo-commit='git reset --soft HEAD~1'
 alias undo-commit-hard='git reset --hard HEAD~1'
 
