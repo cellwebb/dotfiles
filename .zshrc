@@ -66,7 +66,7 @@ plugins=(
     git
     github
     gitignore
-    git-prompt
+    # git-prompt
     vscode
     web-search
     z
