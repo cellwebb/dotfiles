@@ -40,8 +40,8 @@ fi
 if [ -f "$ZSH/custom/exports.zsh" ]; then
   source "$ZSH/custom/exports.zsh"
 fi
-if [ -f "$ZSH/custom/alias.zsh" ]; then
-  source "$ZSH/custom/alias.zsh"
+if [ -f "$ZSH/custom/aliases.zsh" ]; then
+  source "$ZSH/custom/aliases.zsh"
 fi
 if [ -f "$ZSH/custom/functions.zsh" ]; then
   source "$ZSH/custom/functions.zsh"
