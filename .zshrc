@@ -37,21 +37,23 @@ else
 fi
 
 # Source custom configurations
-if [ -f "$ZSH/custom/exports.zsh" ]; then
-  source "$ZSH/custom/exports.zsh"
+if [ -f "$HOME/.config/zsh/exports.zsh" ]; then
+  source "$HOME/.config/zsh/exports.zsh"
 fi
-if [ -f "$ZSH/custom/aliases.zsh" ]; then
-  source "$ZSH/custom/aliases.zsh"
+if [ -f "$HOME/.config/zsh/aliases.zsh" ]; then
+  source "$HOME/.config/zsh/aliases.zsh"
 fi
-if [ -f "$ZSH/custom/functions.zsh" ]; then
-  source "$ZSH/custom/functions.zsh"
+if [ -f "$HOME/.config/zsh/functions.zsh" ]; then
+  source "$HOME/.config/zsh/functions.zsh"
 fi
-if [ -f "$ZSH/custom/secrets.zsh" ]; then
-  source "$ZSH/custom/secrets.zsh"
+if [ -f "$HOME/.config/zsh/secrets.zsh" ]; then
+  source "$HOME/.config/zsh/secrets.zsh"
 fi
 
 # Initialize rbenv (Ruby version manager)
-eval "$(rbenv init - zsh)"
+if command -v rbenv &> /dev/null; then
+    eval "$(rbenv init - zsh)"
+fi
 
 # Oh-My-Zsh Plugins
 plugins=(
@@ -70,9 +72,13 @@ plugins=(
     vscode
     web-search
     z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
 )
+
+# Load zsh-autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Load zsh-syntax-highlighting (must be the last plugin loaded)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Alias Finder Plugin Configuration
 zstyle ':omz:plugins:alias-finder' autoload yes

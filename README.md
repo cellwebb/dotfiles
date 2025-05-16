@@ -9,21 +9,40 @@ Welcome to my dotfiles repository! This repository contains my personalized Zsh 
   - `aliases.zsh`: Contains my custom aliases to speed up and simplify common tasks.
   - `exports.zsh`: Environment variables and exports tailored for my development workflow.
   - `functions.zsh`: Custom functions to enhance productivity and streamline commands.
+  - `secrets.zsh`: Contains sensitive environment variables and secrets, kept separate for security.
 
 ## Installation
+
+### Prerequisites
+
+Install Homebrew if you haven't already:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install required packages:
+
+```bash
+brew install rbenv zsh-autosuggestions zsh-syntax-highlighting
+```
+
+### Configuration
 
 Optional: back up your existing `.zshrc` and `custom/*.zsh` files.
 
 ```bash
 cp ~/.zshrc ~/.zshrc.backup
 
-# create a backup of each *.zsh in ~/.oh-my-zsh/custom/
-for file in ~/.oh-my-zsh/custom/*.zsh; do [ -e "$file" ] && cp "$file" "$file.backup"; done
+# create a backup of each *.zsh in ~/.config/zsh/
+for file in ~/.config/zsh/*.zsh; do [ -e "$file" ] && cp "$file" "$file.backup"; done
 ```
 
 To use these configurations, clone this repository and create symbolic links from the files in this repository to their intended locations on your system:
 
 **NOTE:** Creating symbolic links will **overwrite** existing files! Create backups!
+
+**NOTE:** These symbolic links point to `~/.config/zsh/`.
 
 **NOTE:** Some plugins, such as `autoenv`, will require additional steps to install. Please refer to the plugin's documentation for detailed instructions.
 
@@ -32,9 +51,10 @@ git clone https://github.com/cellwebb/dotfiles.git ~/dotfiles
 
 # Create symbolic links 
 ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/custom/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
-ln -s ~/dotfiles/custom/exports.zsh ~/.oh-my-zsh/custom/exports.zsh
-ln -s ~/dotfiles/custom/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
+ln -s ~/dotfiles/custom/aliases.zsh ~/.config/zsh/aliases.zsh
+ln -s ~/dotfiles/custom/exports.zsh ~/.config/zsh/exports.zsh
+ln -s ~/dotfiles/custom/functions.zsh ~/.config/zsh/functions.zsh
+ln -s ~/dotfiles/custom/secrets.zsh ~/.config/zsh/secrets.zsh
 ```
 
 ## Features
